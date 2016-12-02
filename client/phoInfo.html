@@ -34,38 +34,102 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="large-2 columns small-3"><img src="assets/img/phoSaigon.jpg"/></div>
-        <div class="large-10 columns">
-        <p>
-          <strong>Pho Saigon</strong>
-          Always cheap, always easy
-        </p>
-        <ul class="inline-list">
-          <li><a href="">Rating</a></li>
-          <li><a href="phoDetailPage.html">Distance</a></li>
-        </ul>
-      </div>
-    </div>
+	<ul>
+<li> <a href="phoDetailPage.html"><img id='image0' onclick="ayy()"></img></a><a id='name0'></a><a id='id0'></a></li>
+<li><img id='image1'></img><a id='name1'></a><a id='id1'></a></li>
+<li><img id='image2'></img><a id='name2'></a><a id='id2'></a></li>
+<li><img id='image3'></img><a id='name3'></a><a id='id3'></a></li>
+<li><img id='image4'></img><a id='name4'></a><a id='id4'></a></li>
+<li><img id='image5'></img><a id='name5'></a><a id='id5'></a></li>
+<li><img id='image6'></img><a id='name6'></a><a id='id6'></a></li>
+<li><img id='image7'></img><a id='name7'></a><a id='id7'></a></li>
+<li><img id='image8'></img><a id='name8'></a><a id='id8'></a></li>
+<li><img id='image9'></img><a id='name9'></a><a id='id9'></a></li>
+<li><img id='image10'></img><a id='name10'></a><a id='id10'></a></li>
+<li><img id='image11'></img><a id='name11'></a><a id='id11'></a></li>
+<li><img id='image12'></img><a id='name12'></a><a id='id12'></a></li>
+<li><img id='image13'></img><a id='name13'></a><a id='id13'></a></li>
+<li><img id='image14'></img><a id='name14'></a><a id='id14'></a></li>
+<li><img id='image15'></img><a id='name15'></a><a id='id15'></a></li>
+<li><img id='image16'></img><a id='name16'></a><a id='id16'></a></li>
+<li><img id='image17'></img><a id='name17'></a><a id='id17'></a></li>
+<li><img id='image18'></img><a id='name18'></a><a id='id18'></a></li>
+<li><img id='image19'></img><a id='name19'></a><a id='id19'></a></li>
+	</ul>
 <script>
-var loc = myLocalStorage.get("phoLocation");
+var d = 0;
 function ayy() {
-alert("ayy");
+	myLocalStorage.set('businessId', d.businesses[0].id);
 }
-/*$.ajax({
-		type: 'GET',
-		url: 'http://ec2-54-201-137-29.us-west-2.compute.amazonaws.com:8080/search',
-	 	crossDomain:true,	
-		data: {location: loc},
-		jsonp: false,
-		contentType: 'application/json',
-		dataType: 'json',
-		success: function(data) {
-		},
-		jsonpCallback: "ayy"
-	});*/
+var loc = myLocalStorage.get("phoLocation");
+var test = 5;
 $.get('http://ec2-54-201-137-29.us-west-2.compute.amazonaws.com:8080/search', {location:loc}, function(data){
 console.log(data);
+d = data;
+$('#name1').text(data.businesses[0].name);
+$('#id1').text(data.businesses[0].rating);
+$('#image1').attr('src', data.businesses[0].image_url);
+
+$('#name0').text(data.businesses[0].name);
+$('#id0').text(data.businesses[0].rating);
+$('#image0').attr('src', data.businesses[0].image_url);
+$('#name1').text(data.businesses[1].name);
+$('#id1').text(data.businesses[1].rating);
+$('#image1').attr('src', data.businesses[1].image_url);
+$('#name2').text(data.businesses[2].name);
+$('#id2').text(data.businesses[2].rating);
+$('#image2').attr('src', data.businesses[2].image_url);
+$('#name3').text(data.businesses[3].name);
+$('#id3').text(data.businesses[3].rating);
+$('#image3').attr('src', data.businesses[3].image_url);
+$('#name4').text(data.businesses[4].name);
+$('#id4').text(data.businesses[4].rating);
+$('#image4').attr('src', data.businesses[4].image_url);
+$('#name5').text(data.businesses[5].name);
+$('#id5').text(data.businesses[5].rating);
+$('#image5').attr('src', data.businesses[5].image_url);
+$('#name6').text(data.businesses[6].name);
+$('#id6').text(data.businesses[6].rating);
+$('#image6').attr('src', data.businesses[6].image_url);
+$('#name7').text(data.businesses[7].name);
+$('#id7').text(data.businesses[7].rating);
+$('#image7').attr('src', data.businesses[7].image_url);
+$('#name8').text(data.businesses[8].name);
+$('#id8').text(data.businesses[8].rating);
+$('#image8').attr('src', data.businesses[8].image_url);
+$('#name9').text(data.businesses[9].name);
+$('#id9').text(data.businesses[9].rating);
+$('#image9').attr('src', data.businesses[9].image_url);
+$('#name10').text(data.businesses[10].name);
+$('#id10').text(data.businesses[10].rating);
+$('#image10').attr('src', data.businesses[10].image_url);
+$('#name11').text(data.businesses[11].name);
+$('#id11').text(data.businesses[11].rating);
+$('#image11').attr('src', data.businesses[11].image_url);
+$('#name12').text(data.businesses[12].name);
+$('#id12').text(data.businesses[12].rating);
+$('#image12').attr('src', data.businesses[12].image_url);
+$('#name13').text(data.businesses[13].name);
+$('#id13').text(data.businesses[13].rating);
+$('#image13').attr('src', data.businesses[13].image_url);
+$('#name14').text(data.businesses[14].name);
+$('#id14').text(data.businesses[14].rating);
+$('#image14').attr('src', data.businesses[14].image_url);
+$('#name15').text(data.businesses[15].name);
+$('#id15').text(data.businesses[15].rating);
+$('#image15').attr('src', data.businesses[15].image_url);
+$('#name16').text(data.businesses[16].name);
+$('#id16').text(data.businesses[16].rating);
+$('#image16').attr('src', data.businesses[16].image_url);
+$('#name17').text(data.businesses[17].name);
+$('#id17').text(data.businesses[17].rating);
+$('#image17').attr('src', data.businesses[17].image_url);
+$('#name18').text(data.businesses[18].name);
+$('#id18').text(data.businesses[18].rating);
+$('#image18').attr('src', data.businesses[18].image_url);
+$('#name19').text(data.businesses[19].name);
+$('#id19').text(data.businesses[19].rating);
+$('#image19').attr('src', data.businesses[19].image_url);
 });
 
 </script>
