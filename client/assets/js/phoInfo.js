@@ -1,7 +1,7 @@
 function phoInfo() {
    var loc = myLocalStorage.get("phoLocation");
    $.get('http://ec2-54-201-137-29.us-west-2.compute.amazonaws.com:8080/search', {location:loc}, function(data){
-      for (var x = 0; x < 8; x++) {
+      for (var x = 0; x < 9; x++) {
          var div = document.createElement("div");
          $(div).attr("class", "large-4 small-6 columns");
          $(div).attr("id", "phoSpots" + x);
