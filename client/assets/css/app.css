@@ -1,18 +1,22 @@
 /* Styles for search dropdown */
+
 .search {
   position: relative;
   padding-top: 41px;
   margin-bottom: 0;
 }
+
 .search input {
   padding-left: 240px;
 }
+
 .search .keyword {
   position: absolute;
   width: 100px;
   margin-left: 10px;
   margin-top: 17px;
 }
+
 .search i {
   position: absolute;
   margin-left: 207px;
@@ -20,9 +24,11 @@
   line-height: 50px;
   color: #ccc;
 }
+
 .search .search-field {
   height: 50px;
 }
+
 .search .arrow-down {
   width: 0;
   height: 0;
@@ -40,12 +46,12 @@
   width: 120% !important;
 }
 
-#searchBar{
+#searchBar {
   position: absolute;
   top: 50%;
   left: 50%;
   margin-top: -50px;
-  margin-left: -50px;
-  width: 100px;
+  margin-left: -500px;
+  width: 1000px;
   height: 100px;
 }
