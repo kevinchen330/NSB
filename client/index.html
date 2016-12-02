@@ -10,6 +10,7 @@
     <script src="assets/js/vendor/jquery.js"></script>
     <script src="assets/js/vendor/what-input.js"></script>
     <script src="assets/js/vendor/foundation.js"></script>
+    <script src="code.js"></script>
     <script src="assets/js/app.js"></script>
   </head>
   <body>
@@ -33,8 +34,15 @@
     </div>
 
     <div id="searchBar" class="small-12 columns">
-      <input type="text" placeholder="Pho-ind it by location, restaurant, or pho">
-      <a href="phoInfo.html" class="button special">Search</a>
+      <input type="text" id="phoLocation" placeholder="Pho-ind it by location, restaurant, or pho">
+      <a href="phoInfo.html" class="button special" onclick="clicked()">Search</a>
     </div>
+
+<script>
+function clicked() {
+myLocalStorage.set('phoLocation', $('#phoLocation').val());
+}
+</script>
+
   </body>
 </html>

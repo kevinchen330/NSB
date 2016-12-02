@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/foundation.css">
     <link rel="stylesheet" href="assets/css/app.css">
+<script src="code.js"></script>
     <script src="assets/js/vendor/jquery.js"></script>
     <script src="assets/js/vendor/what-input.js"></script>
     <script src="assets/js/vendor/foundation.js"></script>
     <script src="assets/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/bluebird/latest/bluebird.core.min.js"></script>
+
   </head>
   <body>
     <div class="top-bar" id="realEstateMenu">
@@ -44,5 +47,27 @@
         </ul>
       </div>
     </div>
+<script>
+var loc = myLocalStorage.get("phoLocation");
+function ayy() {
+alert("ayy");
+}
+/*$.ajax({
+		type: 'GET',
+		url: 'http://ec2-54-201-137-29.us-west-2.compute.amazonaws.com:8080/search',
+	 	crossDomain:true,	
+		data: {location: loc},
+		jsonp: false,
+		contentType: 'application/json',
+		dataType: 'json',
+		success: function(data) {
+		},
+		jsonpCallback: "ayy"
+	});*/
+$.get('http://ec2-54-201-137-29.us-west-2.compute.amazonaws.com:8080/search', {location:loc}, function(data){
+console.log(data);
+});
+
+</script>
   </body>
 </html>
